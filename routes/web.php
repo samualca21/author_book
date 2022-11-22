@@ -17,6 +17,9 @@ use App\Http\Controllers\GuestController;
 */
 
 Route::get('/', [GuestController::class, 'index'])->name('guest.index');
+Route::get('/admin', function () {
+    return view('layouts.main');
+});
 
 
 
