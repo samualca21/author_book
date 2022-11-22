@@ -1,6 +1,11 @@
 @extends('layouts.main')
 @section('content')
-<button type="button" class="btn btn-outline-primary mb-3"><a href="{{ route('books.edit', $book->id) }}">Изменить</button>
+<button type="button" class="btn btn-outline-primary mb-2"><a href="{{ route('books.edit', $book->id) }}">Изменить</button>
+<form action="{{ route('books.destroy', $book->id) }}" method="post">
+    @csrf
+    @method('delete')
+    <button type="submit" class="btn btn-primary mb-2">Удалить книгу</button>
+</form>
 <div class="card mb-3" style="width: 20rem;">
     <img src="{{ $book->cover }}" class="card-img-top" alt="...">
     <div class="card-body">

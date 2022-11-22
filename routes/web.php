@@ -18,6 +18,8 @@ use App\Http\Controllers\GuestController;
 
 Route::get('/', [GuestController::class, 'index'])->name('guest.index');
 
+
+
 Route::get('/admin/books', [BookController::class, 'index'])->name('books.index');
 
 Route::get('/admin/books/create', [BookController::class, 'create'])->name('books.create');
@@ -29,6 +31,8 @@ Route::get('/admin/books/{book}', [BookController::class, 'show'])->name('books.
 Route::get('/admin/books/{book}/edit', [BookController::class, 'edit'])->name('books.edit');
 
 Route::patch('/admin/books/{book}', [BookController::class, 'update'])->name('books.update');
+
+Route::delete('/admin/books/{book}', [BookController::class, 'destroy'])->name('books.destroy');
 
 
 Route::get('/admin/authors', [AuthorController::class, 'index'])->name('authors.index');
