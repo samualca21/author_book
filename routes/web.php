@@ -46,3 +46,5 @@ Route::get('/admin/authors/{author}', [AuthorController::class, 'show'])->name('
 Route::get('/admin/authors/{author}/edit', [AuthorController::class, 'edit'])->name('authors.edit');
 
 Route::patch('/admin/authors/{author}', [AuthorController::class, 'update'])->name('authors.update');
+
+Route::delete('/admin/authors/{author}', [AuthorController::class, 'destroy'])->name('authors.destroy');

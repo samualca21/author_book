@@ -44,6 +44,14 @@ class AuthorController extends Controller
         return redirect()->route('authors.show', $author->id);
     }
 
+    public function destroy(Author $author) {
+        $books = $author->books;
+        foreach ($books as $book)
+            $book->delete();
+        $author->delete();
+        return redirect()->route('authors.index');
+    }
+
 }
 
 
