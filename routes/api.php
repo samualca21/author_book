@@ -21,6 +21,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('v1/books/list', [ApiController::class, 'list']);
 
-Route::get('v1/books/{book}', [ApiController::class, 'byId']);
+Route::get('v1/books/by_id/{book}', [ApiController::class, 'byId']);
 
 Route::post('v1/books/update', [ApiController::class, 'update']);
+
+Route::delete('v1/books/id/{book}', [ApiController::class, 'destroy']);
