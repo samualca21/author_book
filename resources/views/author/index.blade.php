@@ -5,7 +5,7 @@
     </div>
     <ul class="list-group">
     @foreach ($authors as $author)
-        <li class="list-group-item">{{ $author->name }}, кол-во книг - {{ count($author->books) }}</li>        
+        <li class="list-group-item"> <a href="{{ route('authors.show', $author->id) }}">{{ $author->name }}, кол-во книг - {{ count($author->books) }}</li>        
     @endforeach
     </ul>
 @endsection
