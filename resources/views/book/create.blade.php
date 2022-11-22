@@ -15,13 +15,7 @@
             <label for="author">Author's name</label>
             <input type="text" name='author' class="form-control" id="author"  placeholder="Author's name">
         </div>
-        <!-- <select class="form-select" name='author_id' aria-label="Пример выбора по умолчанию">
-            <option selected>Откройте это меню выбора</option>
-            @foreach ($authors as $author)
-                <option value="{{ $author->id }}">{{ $author->name }}</option>
-            @endforeach
-        </select> -->
-        <button type="submit" class="btn btn-primary">Add book</button>
+        <button type="submit" class="btn btn-primary">Добавить</button>
     </form>
 </div>
 @endsection

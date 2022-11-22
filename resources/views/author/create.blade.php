@@ -7,7 +7,7 @@
             <label for="name">Author's name</label>
             <input type="text" name='name' class="form-control" id="name"  placeholder="Author's name">
         </div>
-        <button type="submit" class="btn btn-primary">Add author</button>
+        <button type="submit" class="btn btn-primary">Добавить</button>
     </form>
 </div>
 @endsection
