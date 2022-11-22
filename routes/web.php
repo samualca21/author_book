@@ -38,3 +38,7 @@ Route::get('/admin/authors/create', [AuthorController::class, 'create'])->name('
 Route::post('/admin/authors', [AuthorController::class, 'store'])->name('authors.store');
 
 Route::get('/admin/authors/{author}', [AuthorController::class, 'show'])->name('authors.show');
+
+Route::get('/admin/authors/{author}/edit', [AuthorController::class, 'edit'])->name('authors.edit');
+
+Route::patch('/admin/authors/{author}', [AuthorController::class, 'update'])->name('authors.update');

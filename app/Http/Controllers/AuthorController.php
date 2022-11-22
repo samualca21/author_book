@@ -34,6 +34,16 @@ class AuthorController extends Controller
         return view('author.show', compact('author', 'books'));
     }
 
+    public function edit(Author $author) {
+        return view('author.edit', compact('author'));
+    }
+
+    public function update(Author $author) {
+        $data = request()->validate(['name' => 'string']);
+        $author->update($data);
+        return redirect()->route('authors.show', $author->id);
+    }
+
 }
 
 
