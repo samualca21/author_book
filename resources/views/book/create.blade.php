@@ -12,8 +12,8 @@
             <input type="text" name='cover' class="form-control" id="cover"  placeholder="Cover">
         </div>
         <div class="form-group">
-            <label for="author">Author</label>
-            <input type="number" name='author_id' class="form-control" id="author"  placeholder="Author's name">
+            <label for="author">Author's name</label>
+            <input type="text" name='author' class="form-control" id="author"  placeholder="Author's name">
         </div>
         <!-- <select class="form-select" name='author_id' aria-label="Пример выбора по умолчанию">
             <option selected>Откройте это меню выбора</option>

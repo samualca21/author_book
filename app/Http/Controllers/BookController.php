@@ -22,10 +22,12 @@ class BookController extends Controller
         $data = request()->validate([
             'title' => 'string',
             'cover' => 'string',
-            'author_id' => 'integer'
+            'author' => 'string'
         ]);
-        Book::firstOrCreate($data);
+        $authors_name = ['name' => $data['author']];
+        $author = Author::firstOrCreate($authors_name);
+        $book = ['title' => $data['title'], 'cover' => $data['cover'], 'author_id' => $author->id];
+        Book::firstOrCreate($book);
         return redirect()->route('books.index');
     }
-
 }
