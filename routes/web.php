@@ -33,3 +33,5 @@ Route::get('/admin/authors', [AuthorController::class, 'index'])->name('authors.
 Route::get('/admin/authors/create', [AuthorController::class, 'create'])->name('authors.create');
 
 Route::post('/admin/authors', [AuthorController::class, 'store'])->name('authors.store');
+
+Route::get('/admin/authors/{author}', [AuthorController::class, 'show'])->name('authors.show');

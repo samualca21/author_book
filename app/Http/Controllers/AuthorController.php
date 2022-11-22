@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Author;
+use App\Models\Book;
 
 class AuthorController extends Controller
 {
@@ -27,6 +28,12 @@ class AuthorController extends Controller
         Author::firstOrCreate($data);
         return redirect()->route('authors.index');
     }
+
+    public function show(Author $author) {
+        $books = Book::all();
+        return view('author.show', compact('author', 'books'));
+    }
+
 }
 
 
