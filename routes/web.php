@@ -26,6 +26,9 @@ Route::post('/admin/books', [BookController::class, 'store'])->name('books.store
 
 Route::get('/admin/books/{book}', [BookController::class, 'show'])->name('books.show');
 
+Route::get('/admin/books/{book}/edit', [BookController::class, 'edit'])->name('books.edit');
+
+Route::patch('/admin/books/{book}', [BookController::class, 'update'])->name('books.update');
 
 
 Route::get('/admin/authors', [AuthorController::class, 'index'])->name('authors.index');
