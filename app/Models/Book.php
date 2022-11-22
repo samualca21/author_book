@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     use HasFactory;
+
+    protected $guarded = false;
     public function author() {
         return $this->belongsTo(Author::class);
     }
