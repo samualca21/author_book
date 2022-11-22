@@ -10,11 +10,13 @@
 </head>
 <body>
 <div class="container">
-<ul class="nav">
-    <li class="d-grid gap-2 col-6 mx-auto">
-        <a class="btn btn-primary btn-lg mt-5" href="{{ route('books.index')}}">Книги</a>
-        <a class="btn btn-success btn-lg mb-5" href="{{ route('authors.index')}}">Авторы</a>
-    </li>
+    <a class="btn btn-info mt-5" href="{{ route('guest.index')}}">Гостевая страница</a>
+    <ul class="nav">
+        
+        <li class="d-grid gap-2 col-6 mx-auto">
+            <a class="btn btn-primary btn-lg mt-3" href="{{ route('books.index')}}">Книги</a>
+            <a class="btn btn-success btn-lg mb-5" href="{{ route('authors.index')}}">Авторы</a>
+        </li>
     </ul>
     @yield('content')
 </div>

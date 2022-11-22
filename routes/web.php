@@ -24,6 +24,10 @@ Route::get('/admin/books/create', [BookController::class, 'create'])->name('book
 
 Route::post('/admin/books', [BookController::class, 'store'])->name('books.store');
 
+Route::get('/admin/books/{book}', [BookController::class, 'show'])->name('books.show');
+
+
+
 Route::get('/admin/authors', [AuthorController::class, 'index'])->name('authors.index');
 
 Route::get('/admin/authors/create', [AuthorController::class, 'create'])->name('authors.create');
