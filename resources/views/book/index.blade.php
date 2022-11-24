@@ -3,7 +3,7 @@
     <div class="nav-item">
         <a class="btn btn-primary mb-4 mt-2" aria-current="page" href="{{ route('books.create')}}">Добавить книгу</a>
     </div>
-    <div class="d-flex flex-row justify-content-around">
+    <div class="d-flex flex-column justify-content-center">
     @foreach ($books as $book)
             <div class="card p-1 m-2" style="width: 20rem;">
                 <img src="{{ $book->cover }}" class="card-img-top" alt="...">
